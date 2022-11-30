@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "400327556632",
+    "project_id": "proyectodispmov-fe0df",
+    "storage_bucket": "proyectodispmov-fe0df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400327556632:android:bf3196b5895ae50f940d6d",
+        "android_client_info": {
+          "package_name": "com.example.proyectodispmoviles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "400327556632-b88ph3e8d1rqc18o04pcb4saf0ti4kip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbfvxQ5QssPmHXbVoV6G_U3539maS8mo4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "400327556632-b88ph3e8d1rqc18o04pcb4saf0ti4kip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
