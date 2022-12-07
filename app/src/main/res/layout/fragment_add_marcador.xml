@@ -1,65 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/et_correo"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textStyle="bold" />
+    tools:context=".ui.home.AddMarcadorFragment">
 
     <EditText
-        android:id="@+id/et_correo"
+        android:id="@+id/et_equipo1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/nombreLugar"
         android:inputType="textPersonName"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/et_clave"
-        android:textAlignment="center"
+        android:padding="20dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <EditText
-        android:id="@+id/et_clave"
+        android:id="@+id/et_marcador1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/correoLugar"
         android:inputType="textPersonName"
-        android:password="true"
+        android:padding="20dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/et_equipo2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:ems="10"
+        android:hint="@string/telefonoLugar"
+        android:inputType="textPersonName"
+        android:padding="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-        <ImageButton
-            android:id="@+id/bt_registro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_register" />
+    <EditText
+        android:id="@+id/et_marcador2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/webLugar"
+        android:inputType="textPersonName"
+        android:padding="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-        <ImageButton
-            android:id="@+id/bt_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_login" />
-    </LinearLayout>
-
+    <Button
+        android:id="@+id/bt_Agregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btAddLugar" />
 </LinearLayout>

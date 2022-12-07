@@ -1,4 +1,4 @@
-package com.example.proyectodispmoviles.ui.gallery
+package com.sem08.viewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,4 +1,4 @@
-package com.example.proyectodispmoviles.ui.slideshow
+package com.sem08.ui.slideshow
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.proyectodispmoviles.databinding.FragmentSlideshowBinding
+import com.sem08.databinding.FragmentSlideshowBinding
+import com.sem08.viewModel.SlideshowViewModel
 
 class SlideshowFragment : Fragment() {
 

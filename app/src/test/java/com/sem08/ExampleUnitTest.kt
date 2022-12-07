@@ -1,4 +1,4 @@
-package com.example.proyectodispmoviles
+package com.sem08
 
 import org.junit.Test
 
