@@ -28,21 +28,21 @@ class AddMarcadorFragment : Fragment() {
         homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         _binding = FragmentAddMarcadorBinding.inflate(inflater,container,false)
 
-        binding.btAgregar.setOnClickListener{ agregarLugar()}
+        binding.btAgregar.setOnClickListener{ agregarMarcador()}
 
         // Inflate the layout for this fragment
         return binding.root
     }
 
-    private fun  agregarLugar(){
-        val nombre = binding.etEquipo1.text.toString()
-        val correo = binding.etMarcador1.text.toString()
-        val telefono = binding.etEquipo2.text.toString()
-        val web = binding.etMarcador2.text.toString()
+    private fun  agregarMarcador(){
+        val equipo1 = binding.etEquipo1.text.toString()
+        val marcador1 = binding.etMarcador1.text.toString()
+        val equipo2 = binding.etEquipo2.text.toString()
+        val marcador2 = binding.etMarcador2.text.toString()
 
-        if (nombre.isNotEmpty()){
-            val lugar = Lugar("",nombre,correo,telefono,web)
-            homeViewModel.guardarLugar(lugar)
+        if (equipo1.isNotEmpty()){
+            val marcador = Lugar("",equipo1,marcador1,equipo2,marcador2)
+            homeViewModel.guardarMarcador(marcador)
             Toast.makeText(requireContext(),getText(R.string.ms_AddLugar), Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_addLugarFragment_to_nav_home)
         }else{

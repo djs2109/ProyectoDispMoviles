@@ -15,8 +15,8 @@ class HomeViewModel (application: Application): AndroidViewModel(application) {
         obtenerLugares = repository.obtenerLugares
     }
 
-    fun guardarLugar(lugar: Lugar){
-        repository.guardarLugar(lugar)
+    fun guardarMarcador(lugar: Lugar){
+        repository.guardarMarcador(lugar)
     }
     fun eliminarLugar(lugar: Lugar){
         repository.eliminarLugar(lugar)

@@ -31,27 +31,27 @@ class UpdateMarcadorFragment : Fragment() {
         _binding = FragmentUpdateMarcadorBinding.inflate(inflater,container,false)
 
         //Carga de Lugar
-        binding.etEquipo1.setText(args.lugarArg.equipo1)
-        binding.etMarcador1.setText(args.lugarArg.marcador1)
-        binding.etEquipo2.setText(args.lugarArg.equipo2)
-        binding.etMarcador2.setText(args.lugarArg.marcador2)
+        binding.etEquipo1.setText(args.marcadorArg.equipo1)
+        binding.etMarcador1.setText(args.marcadorArg.marcador1)
+        binding.etEquipo2.setText(args.marcadorArg.equipo2)
+        binding.etMarcador2.setText(args.marcadorArg.marcador2)
 
-        binding.btUpdateLugar.setOnClickListener{ updateLugar()}
-        binding.btDeleteLugar.setOnClickListener{ deleteLugar()}
+        binding.btUpdateLugar.setOnClickListener{ updateMarcador()}
+        binding.btDeleteLugar.setOnClickListener{ deleteMarcador()}
 
         // Inflate the layout for this fragment
         return binding.root
     }
 
-    private fun updateLugar(){
-        val nombre = binding.etEquipo1.text.toString()
-        val correo = binding.etMarcador1.text.toString()
-        val telefono = binding.etEquipo2.text.toString()
-        val web = binding.etMarcador2.text.toString()
+    private fun updateMarcador(){
+        val equipo1 = binding.etEquipo1.text.toString()
+        val marcador1 = binding.etMarcador1.text.toString()
+        val equipo2 = binding.etEquipo2.text.toString()
+        val marcador2 = binding.etMarcador2.text.toString()
 
-        if(nombre.isNotEmpty()){
-            val lugar = Lugar(args.lugarArg.id,nombre,correo,telefono,web)
-            homeViewModel.guardarLugar(lugar)
+        if(equipo1.isNotEmpty()){
+            val marcador = Lugar(args.marcadorArg.id,equipo1,marcador1,equipo2,marcador2)
+            homeViewModel.guardarLugar(marcador)
             Toast.makeText(requireContext(),getString(R.string.ms_UpdateLugar),Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_updateLugarFragment_to_nav_home)
         }else{
@@ -60,14 +60,14 @@ class UpdateMarcadorFragment : Fragment() {
 
     }
 
-    private fun deleteLugar(){
-        val nombre = binding.etEquipo1.text.toString()
-        val telefono = binding.etMarcador1.text.toString()
-        val correo = binding.etEquipo2.text.toString()
-        val web = binding.etMarcador2.text.toString()
+    private fun deleteMarcador(){
+        val equipo1 = binding.etEquipo1.text.toString()
+        val marcador1 = binding.etMarcador1.text.toString()
+        val equipo2 = binding.etEquipo2.text.toString()
+        val marcador2 = binding.etMarcador2.text.toString()
 
-        val lugar = Lugar(args.lugarArg.id,nombre,correo,web,telefono)
-        homeViewModel.eliminarLugar(lugar)
+        val marcador = Lugar(args.marcadorArg.id,equipo1,marcador1,equipo2,marcador2)
+        homeViewModel.eliminarLugar(marcador)
         Toast.makeText(requireContext(),getString(R.string.ms_DeleteLugar),Toast.LENGTH_LONG).show()
         findNavController().navigate(R.id.action_updateLugarFragment_to_nav_home)
     }

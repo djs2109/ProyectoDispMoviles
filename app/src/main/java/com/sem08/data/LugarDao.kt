@@ -47,7 +47,7 @@ class LugarDao {
         return listaLugares
     }
 
-    fun guardarLugar(lugar: Lugar){
+    fun guardarMarcador(lugar: Lugar){
         val document: DocumentReference
         if(lugar.id.isEmpty()){
             //Agregar
