@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/nombreLugar"
+        android:hint="@string/equipo1"
         android:inputType="textPersonName"
         android:padding="20dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/correoLugar"
+        android:hint="@string/marcador1"
         android:inputType="textPersonName"
         android:padding="20dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/telefonoLugar"
+        android:hint="@string/equipo2"
         android:inputType="textPersonName"
         android:padding="20dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/webLugar"
+        android:hint="@string/marcador2"
         android:inputType="textPersonName"
         android:padding="20dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />

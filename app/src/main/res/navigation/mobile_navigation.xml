@@ -11,10 +11,10 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_addLugarFragment"
+            android:id="@+id/action_nav_home_to_addMarcadorFragment"
             app:destination="@id/addMarcadorFragment" />
         <action
-            android:id="@+id/action_nav_home_to_updateLugarFragment"
+            android:id="@+id/action_nav_home_to_updateMarcadorFragment"
             app:destination="@id/updateMarcadorFragment" />
     </fragment>
 
@@ -35,7 +35,7 @@
         android:label="Agregar Marcador"
         tools:layout="@layout/fragment_add_marcador">
         <action
-            android:id="@+id/action_addLugarFragment_to_nav_home"
+            android:id="@+id/action_addMarcadorrFragment_to_nav_home"
             app:destination="@id/nav_home" />
     </fragment>
     <fragment
@@ -44,7 +44,7 @@
         android:label="Actualizar Marcador"
         tools:layout="@layout/fragment_update_marcador" >
         <action
-            android:id="@+id/action_updateLugarFragment_to_nav_home"
+            android:id="@+id/action_updateMarcadorFragment_to_nav_home"
             app:destination="@id/nav_home" />
         <argument
             android:name="marcadorArg"

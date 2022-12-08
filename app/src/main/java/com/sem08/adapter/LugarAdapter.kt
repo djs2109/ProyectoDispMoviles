@@ -27,7 +27,7 @@ class LugarAdapter: RecyclerView.Adapter<LugarAdapter.LugarViewHolder>() {
             itemBinding.tvMarcador2.text = lugar.marcador2
             //Evento enviar Update
             itemBinding.vistaFila.setOnClickListener{
-                val accion = HomeFragmentDirections.actionNavHomeToUpdateLugarFragment(lugar)
+                val accion = HomeFragmentDirections.actionNavHomeToUpdateMarcadorFragment(lugar)
                 itemView.findNavController().navigate(accion)
             }
 

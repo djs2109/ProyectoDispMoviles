@@ -44,7 +44,7 @@ class AddMarcadorFragment : Fragment() {
             val marcador = Lugar("",equipo1,marcador1,equipo2,marcador2)
             homeViewModel.guardarMarcador(marcador)
             Toast.makeText(requireContext(),getText(R.string.ms_AddLugar), Toast.LENGTH_LONG).show()
-            findNavController().navigate(R.id.action_addLugarFragment_to_nav_home)
+            findNavController().navigate(R.id.action_addMarcadorrFragment_to_nav_home)
         }else{
             Toast.makeText(requireContext(),getText(R.string.ms_FaltaValores), Toast.LENGTH_LONG).show()
 

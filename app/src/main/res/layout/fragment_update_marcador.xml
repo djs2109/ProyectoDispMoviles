@@ -12,41 +12,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/nombreLugar"
-        android:inputType="textPersonName" />
+        android:hint="@string/equipo1"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/et_marcador1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/correoLugar"
-        android:inputType="textEmailAddress" />
+        android:hint="@string/marcador1"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/et_equipo2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/telefonoLugar"
-        android:inputType="phone" />
+        android:hint="@string/equipo2"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/et_marcador2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/webLugar"
-        android:inputType="textPersonName" />
+        android:hint="@string/marcador2"
+        android:inputType="text" />
 
     <Button
-        android:id="@+id/bt_update_lugar"
+        android:id="@+id/bt_update_marcador"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/bt_update_lugar" />
 
     <Button
-        android:id="@+id/bt_delete_lugar"
+        android:id="@+id/bt_delete_marcador"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/bt_delete_lugar" />
