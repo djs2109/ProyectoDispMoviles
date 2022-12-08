@@ -18,13 +18,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="nombreLugar">Equipo Local</string>
-    <string name="equipo1">Equipo Local</string>
     <string name="correoLugar">Marcador 1</string>
-    <string name="marcador1">Marcador 1</string>
     <string name="telefonoLugar">Equipo Visita</string>
-    <string name="equipo2">Equipo Visita</string>
     <string name="webLugar">Marcador 2</string>
-    <string name="marcador2">Marcador 2</string>
     <string name="btAddLugar">Agregar Marcador</string>
 
     <string name="ms_AddLugar">Marcador Agregado con Éxito</string>
@@ -34,4 +30,19 @@
 
     <string name="bt_update_lugar">Actualizar Marcador</string>
     <string name="bt_delete_lugar">Eliminar Marcador</string>
+
+    <!-- Quiniela Strings -->
+    <string name="equipo1">Equipo Local</string>
+    <string name="marcador1">Marcador 1</string>
+    <string name="equipo2">Equipo Visita</string>
+    <string name="marcador2">Marcador 2</string>
+    <string name="btAddMarcador">Agregar Marcador</string>
+
+    <string name="ms_AddMarcador">Marcador Agregado con Éxito</string>
+    <string name="ms_UpdateMarcador">Marcador Modificado con Éxito</string>
+    <string name="ms_DeleteMarcador">Marcador Eliminado con Éxito</string>
+
+    <string name="bt_update_marcador">Actualizar Marcador</string>
+    <string name="bt_delete_marcador">Eliminar Marcador</string>
+
 </resources>

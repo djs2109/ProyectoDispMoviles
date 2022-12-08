@@ -9,16 +9,16 @@ import kotlinx.coroutines.launch
 
 class HomeViewModel (application: Application): AndroidViewModel(application) {
     private val repository: LugarRepository = LugarRepository(LugarDao())
-    val obtenerLugares: MutableLiveData<List<Lugar>>
+    val obtenerMarcadores: MutableLiveData<List<Lugar>>
 
     init{
-        obtenerLugares = repository.obtenerLugares
+        obtenerMarcadores = repository.obtenerMarcadores
     }
 
     fun guardarMarcador(lugar: Lugar){
         repository.guardarMarcador(lugar)
     }
-    fun eliminarLugar(lugar: Lugar){
-        repository.eliminarLugar(lugar)
+    fun eliminarMarcador(lugar: Lugar){
+        repository.eliminarMarcador(lugar)
     }
 }

@@ -30,7 +30,7 @@ class UpdateMarcadorFragment : Fragment() {
         homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         _binding = FragmentUpdateMarcadorBinding.inflate(inflater,container,false)
 
-        //Carga de Lugar
+        //Carga de Marcador
         binding.etEquipo1.setText(args.marcadorArg.equipo1)
         binding.etMarcador1.setText(args.marcadorArg.marcador1)
         binding.etEquipo2.setText(args.marcadorArg.equipo2)
@@ -52,7 +52,7 @@ class UpdateMarcadorFragment : Fragment() {
         if(equipo1.isNotEmpty()){
             val marcador = Lugar(args.marcadorArg.id,equipo1,marcador1,equipo2,marcador2)
             homeViewModel.guardarMarcador(marcador)
-            Toast.makeText(requireContext(),getString(R.string.ms_UpdateLugar),Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(),getString(R.string.ms_UpdateMarcador),Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_updateMarcadorFragment_to_nav_home)
         }else{
             Toast.makeText(requireContext(),getString(R.string.ms_FaltaValores),Toast.LENGTH_LONG).show()
@@ -67,8 +67,8 @@ class UpdateMarcadorFragment : Fragment() {
         val marcador2 = binding.etMarcador2.text.toString()
 
         val marcador = Lugar(args.marcadorArg.id,equipo1,marcador1,equipo2,marcador2)
-        homeViewModel.eliminarLugar(marcador)
-        Toast.makeText(requireContext(),getString(R.string.ms_DeleteLugar),Toast.LENGTH_LONG).show()
+        homeViewModel.eliminarMarcador(marcador)
+        Toast.makeText(requireContext(),getString(R.string.ms_DeleteMarcador),Toast.LENGTH_LONG).show()
         findNavController().navigate(R.id.action_updateMarcadorFragment_to_nav_home)
     }
 }

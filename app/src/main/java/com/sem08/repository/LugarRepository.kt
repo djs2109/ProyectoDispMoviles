@@ -6,13 +6,13 @@ import com.sem08.data.LugarDao
 import com.sem08.model.Lugar
 
 class LugarRepository (private val lugarDao: LugarDao){
-    fun guardarMarcador(lugar: Lugar){
-        lugarDao.guardarMarcador(lugar)
+    fun guardarMarcador(marcador: Lugar){
+        lugarDao.guardarMarcador(marcador)
     }
 
-    fun eliminarLugar(lugar: Lugar){
-        lugarDao.eliminarLugar(lugar)
+    fun eliminarMarcador(marcador: Lugar){
+        lugarDao.eliminarMarcador(marcador)
     }
 
-    val obtenerLugares: MutableLiveData<List<Lugar>> = lugarDao.getLugares()
+    val obtenerMarcadores: MutableLiveData<List<Lugar>> = lugarDao.getMarcadores()
 }

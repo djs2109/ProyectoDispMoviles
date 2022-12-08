@@ -35,15 +35,15 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_nav_home_to_addMarcadorFragment)
         }
 
-        //Listado de lugares
-        val lugarAdapter = LugarAdapter()
+        //Listado de marcadores
+        val marcadorAdapter = LugarAdapter()
         val reciclador = binding.reciclador
-        reciclador.adapter = lugarAdapter
+        reciclador.adapter = marcadorAdapter
         reciclador.layoutManager = LinearLayoutManager(requireContext())
 
-        homeViewModel.obtenerLugares.observe(viewLifecycleOwner){
-            lugares -> lugarAdapter.setLugares(lugares)
-            //lugarAdapter.setLugares(it)
+        homeViewModel.obtenerMarcadores.observe(viewLifecycleOwner){
+            marcadores -> marcadorAdapter.setMarcadores(marcadores)
+            //marcadorAdapter.setMarcadores(it)
         }
 
         return binding.root

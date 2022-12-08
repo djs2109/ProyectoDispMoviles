@@ -14,7 +14,7 @@ class LugarAdapter: RecyclerView.Adapter<LugarAdapter.LugarViewHolder>() {
     //Lista de Lugares
     private var listaLugares = emptyList<Lugar>()
 
-    fun setLugares(lugares: List<Lugar>){
+    fun setMarcadores(lugares: List<Lugar>){
         listaLugares = lugares
         notifyDataSetChanged()
     }

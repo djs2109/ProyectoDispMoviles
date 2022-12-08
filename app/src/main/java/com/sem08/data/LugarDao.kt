@@ -22,7 +22,7 @@ class LugarDao {
 
     }
 
-    fun getLugares(): MutableLiveData<List<Lugar>>{
+    fun getMarcadores(): MutableLiveData<List<Lugar>>{
         val listaLugares = MutableLiveData<List<Lugar>>()
         firestore
             .collection("marcadores")
@@ -74,7 +74,7 @@ class LugarDao {
             }
     }
 
-    fun eliminarLugar(lugar: Lugar){
+    fun eliminarMarcador(lugar: Lugar){
         if (lugar.id.isNotEmpty()){
             firestore
                 .collection("marcadores")
