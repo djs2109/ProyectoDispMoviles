@@ -43,12 +43,12 @@
         android:id="@+id/bt_update_marcador"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bt_update_lugar" />
+        android:text="@string/bt_update_marcador" />
 
     <Button
         android:id="@+id/bt_delete_marcador"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bt_delete_lugar" />
+        android:text="@string/bt_delete_marcador" />
 
 </LinearLayout>

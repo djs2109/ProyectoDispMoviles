@@ -51,5 +51,5 @@
         android:id="@+id/bt_Agregar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btAddLugar" />
+        android:text="@string/btAddMarcador" />
 </LinearLayout>

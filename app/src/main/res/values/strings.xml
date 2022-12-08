@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sem08</string>
+    <string name="app_name">Quiniela</string>
     <string name="et_correo">Correo</string>
     <string name="et_clave">Contraseña</string>
     <string name="nologin">Usuario/Contraseña no valida</string>
