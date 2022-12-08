@@ -23,7 +23,7 @@ class LugarDao {
     }
 
     fun getMarcadores(): MutableLiveData<List<Lugar>>{
-        val listaLugares = MutableLiveData<List<Lugar>>()
+        val listaMarcadores = MutableLiveData<List<Lugar>>()
         firestore
             .collection("marcadores")
             .document(codigoUsuario)
@@ -34,38 +34,38 @@ class LugarDao {
                 }
                 if (snapshot != null){
                     val lista = ArrayList<Lugar>()
-                    val lugares = snapshot.documents
-                    lugares.forEach{
-                        val lugar= it.toObject(Lugar::class.java)
-                        if (lugar != null){
-                            lista.add(lugar)
+                    val marcadores = snapshot.documents
+                    marcadores.forEach{
+                        val marcador= it.toObject(Lugar::class.java)
+                        if (marcador != null){
+                            lista.add(marcador)
                         }
                     }
-                    listaLugares.value = lista
+                    listaMarcadores.value = lista
                 }
             }
-        return listaLugares
+        return listaMarcadores
     }
 
-    fun guardarMarcador(lugar: Lugar){
+    fun guardarMarcador(marcador: Lugar){
         val document: DocumentReference
-        if(lugar.id.isEmpty()){
+        if(marcador.id.isEmpty()){
             //Agregar
             document = firestore
                 .collection("marcadores")
                 .document(codigoUsuario)
                 .collection("misMarcadores")
                 .document()
-            lugar.id = document.id
+            marcador.id = document.id
         }else{
             //Modificar
             document = firestore
                 .collection("marcadores")
                 .document(codigoUsuario)
                 .collection("misMarcadores")
-                .document(lugar.id)
+                .document(marcador.id)
         }
-        document.set(lugar)
+        document.set(marcador)
             .addOnCompleteListener{
                 Log.d("guardarMarcador","Guardado con Exito")
             }
@@ -74,13 +74,13 @@ class LugarDao {
             }
     }
 
-    fun eliminarMarcador(lugar: Lugar){
-        if (lugar.id.isNotEmpty()){
+    fun eliminarMarcador(marcador: Lugar){
+        if (marcador.id.isNotEmpty()){
             firestore
                 .collection("marcadores")
                 .document(codigoUsuario)
                 .collection("misMarcadores")
-                .document(lugar.id)
+                .document(marcador.id)
                 .delete()
                 .addOnCompleteListener{
                     Log.d("eliminarMarcador","Eliminado con Exito")

@@ -11,23 +11,23 @@ import com.sem08.ui.home.UpdateMarcadorFragmentDirections
 
 class LugarAdapter: RecyclerView.Adapter<LugarAdapter.LugarViewHolder>() {
 
-    //Lista de Lugares
-    private var listaLugares = emptyList<Lugar>()
+    //Lista de Marcadores
+    private var listaMarcadores = emptyList<Lugar>()
 
-    fun setMarcadores(lugares: List<Lugar>){
-        listaLugares = lugares
+    fun setMarcadores(marcadores: List<Lugar>){
+        listaMarcadores = marcadores
         notifyDataSetChanged()
     }
 
     inner class LugarViewHolder(private val itemBinding: MarcadorFilaBinding) : RecyclerView.ViewHolder(itemBinding.root){
-        fun dibuja(lugar: Lugar){
-            itemBinding.tvEquipo1.text = lugar.equipo1
-            itemBinding.tvMarcador1.text = lugar.marcador1
-            itemBinding.tvEquipo2.text = lugar.equipo2
-            itemBinding.tvMarcador2.text = lugar.marcador2
+        fun dibuja(marcador: Lugar){
+            itemBinding.tvEquipo1.text = marcador.equipo1
+            itemBinding.tvMarcador1.text = marcador.marcador1
+            itemBinding.tvEquipo2.text = marcador.equipo2
+            itemBinding.tvMarcador2.text = marcador.marcador2
             //Evento enviar Update
             itemBinding.vistaFila.setOnClickListener{
-                val accion = HomeFragmentDirections.actionNavHomeToUpdateMarcadorFragment(lugar)
+                val accion = HomeFragmentDirections.actionNavHomeToUpdateMarcadorFragment(marcador)
                 itemView.findNavController().navigate(accion)
             }
 
@@ -40,12 +40,12 @@ class LugarAdapter: RecyclerView.Adapter<LugarAdapter.LugarViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: LugarViewHolder, position: Int) {
-        val lugar = listaLugares[position]
-        holder.dibuja(lugar)
+        val marcador = listaMarcadores[position]
+        holder.dibuja(marcador)
     }
 
     override fun getItemCount(): Int {
-        return listaLugares.size
+        return listaMarcadores.size
     }
 
 
