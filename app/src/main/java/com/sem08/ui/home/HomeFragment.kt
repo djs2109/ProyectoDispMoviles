@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sem08.R
-import com.sem08.adapter.LugarAdapter
+import com.sem08.adapter.MarcadorAdapter
 import com.sem08.databinding.FragmentHomeBinding
 import com.sem08.viewModel.HomeViewModel
 
@@ -36,7 +36,7 @@ class HomeFragment : Fragment() {
         }
 
         //Listado de marcadores
-        val marcadorAdapter = LugarAdapter()
+        val marcadorAdapter = MarcadorAdapter()
         val reciclador = binding.reciclador
         reciclador.adapter = marcadorAdapter
         reciclador.layoutManager = LinearLayoutManager(requireContext())
