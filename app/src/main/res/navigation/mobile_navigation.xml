@@ -48,6 +48,6 @@
             app:destination="@id/nav_home" />
         <argument
             android:name="marcadorArg"
-            app:argType="com.sem08.model.Lugar" />
+            app:argType="com.sem08.model.Marcador" />
     </fragment>
 </navigation>

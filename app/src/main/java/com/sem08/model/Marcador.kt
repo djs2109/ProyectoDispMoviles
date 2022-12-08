@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Lugar(
+data class Marcador (
 
     var id: String,
     val equipo1: String,

@@ -7,7 +7,7 @@ import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 import com.google.firebase.ktx.Firebase
-import com.sem08.model.Lugar
+import com.sem08.model.Marcador
 
 class MarcadorDao {
     //Firebase Vars
@@ -21,8 +21,8 @@ class MarcadorDao {
 
     }
 
-    fun getMarcadores(): MutableLiveData<List<Lugar>>{
-        val listaMarcadores = MutableLiveData<List<Lugar>>()
+    fun getMarcadores(): MutableLiveData<List<Marcador>>{
+        val listaMarcadores = MutableLiveData<List<Marcador>>()
         firestore
             .collection("marcadores")
             .document(codigoUsuario)
@@ -32,10 +32,10 @@ class MarcadorDao {
                     return@addSnapshotListener
                 }
                 if (snapshot != null){
-                    val lista = ArrayList<Lugar>()
+                    val lista = ArrayList<Marcador>()
                     val marcadores = snapshot.documents
                     marcadores.forEach{
-                        val marcador= it.toObject(Lugar::class.java)
+                        val marcador= it.toObject(Marcador::class.java)
                         if (marcador != null){
                             lista.add(marcador)
                         }
@@ -46,7 +46,7 @@ class MarcadorDao {
         return listaMarcadores
     }
 
-    fun guardarMarcador(marcador: Lugar){
+    fun guardarMarcador(marcador: Marcador){
         val document: DocumentReference
         if(marcador.id.isEmpty()){
             //Agregar
@@ -73,7 +73,7 @@ class MarcadorDao {
             }
     }
 
-    fun eliminarMarcador(marcador: Lugar){
+    fun eliminarMarcador(marcador: Marcador){
         if (marcador.id.isNotEmpty()){
             firestore
                 .collection("marcadores")

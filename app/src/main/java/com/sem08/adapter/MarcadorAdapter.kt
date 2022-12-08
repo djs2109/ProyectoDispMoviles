@@ -5,21 +5,21 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.sem08.databinding.MarcadorFilaBinding
-import com.sem08.model.Lugar
+import com.sem08.model.Marcador
 import com.sem08.ui.home.HomeFragmentDirections
 
 class MarcadorAdapter: RecyclerView.Adapter<MarcadorAdapter.MarcadorViewHolder>() {
 
     //Lista de Marcadores
-    private var listaMarcadores = emptyList<Lugar>()
+    private var listaMarcadores = emptyList<Marcador>()
 
-    fun setMarcadores(marcadores: List<Lugar>){
+    fun setMarcadores(marcadores: List<Marcador>){
         listaMarcadores = marcadores
         notifyDataSetChanged()
     }
 
     inner class MarcadorViewHolder(private val itemBinding: MarcadorFilaBinding) : RecyclerView.ViewHolder(itemBinding.root){
-        fun dibuja(marcador: Lugar){
+        fun dibuja(marcador: Marcador){
             itemBinding.tvEquipo1.text = marcador.equipo1
             itemBinding.tvMarcador1.text = marcador.marcador1
             itemBinding.tvEquipo2.text = marcador.equipo2

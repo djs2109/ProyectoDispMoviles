@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.sem08.R
 import com.sem08.databinding.FragmentAddMarcadorBinding
-import com.sem08.model.Lugar
+import com.sem08.model.Marcador
 import com.sem08.viewModel.HomeViewModel
 
 
@@ -41,7 +41,7 @@ class AddMarcadorFragment : Fragment() {
         val marcador2 = binding.etMarcador2.text.toString()
 
         if (equipo1.isNotEmpty()){
-            val marcador = Lugar("",equipo1,marcador1,equipo2,marcador2)
+            val marcador = Marcador("",equipo1,marcador1,equipo2,marcador2)
             homeViewModel.guardarMarcador(marcador)
             Toast.makeText(requireContext(),getText(R.string.ms_AddMarcador), Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_addMarcadorrFragment_to_nav_home)

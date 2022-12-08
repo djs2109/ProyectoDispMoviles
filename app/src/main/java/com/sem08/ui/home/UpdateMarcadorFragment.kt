@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.sem08.R
 import com.sem08.databinding.FragmentUpdateMarcadorBinding
-import com.sem08.model.Lugar
+import com.sem08.model.Marcador
 import com.sem08.viewModel.HomeViewModel
 
 class UpdateMarcadorFragment : Fragment() {
@@ -50,7 +50,7 @@ class UpdateMarcadorFragment : Fragment() {
         val marcador2 = binding.etMarcador2.text.toString()
 
         if(equipo1.isNotEmpty()){
-            val marcador = Lugar(args.marcadorArg.id,equipo1,marcador1,equipo2,marcador2)
+            val marcador = Marcador(args.marcadorArg.id,equipo1,marcador1,equipo2,marcador2)
             homeViewModel.guardarMarcador(marcador)
             Toast.makeText(requireContext(),getString(R.string.ms_UpdateMarcador),Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_updateMarcadorFragment_to_nav_home)
@@ -66,7 +66,7 @@ class UpdateMarcadorFragment : Fragment() {
         val equipo2 = binding.etEquipo2.text.toString()
         val marcador2 = binding.etMarcador2.text.toString()
 
-        val marcador = Lugar(args.marcadorArg.id,equipo1,marcador1,equipo2,marcador2)
+        val marcador = Marcador(args.marcadorArg.id,equipo1,marcador1,equipo2,marcador2)
         homeViewModel.eliminarMarcador(marcador)
         Toast.makeText(requireContext(),getString(R.string.ms_DeleteMarcador),Toast.LENGTH_LONG).show()
         findNavController().navigate(R.id.action_updateMarcadorFragment_to_nav_home)
