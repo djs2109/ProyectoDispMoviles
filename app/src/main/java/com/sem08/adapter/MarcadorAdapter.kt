@@ -21,9 +21,9 @@ class MarcadorAdapter: RecyclerView.Adapter<MarcadorAdapter.MarcadorViewHolder>(
     inner class MarcadorViewHolder(private val itemBinding: MarcadorFilaBinding) : RecyclerView.ViewHolder(itemBinding.root){
         fun dibuja(marcador: Marcador){
             itemBinding.tvEquipo1.text = marcador.equipo1
-            itemBinding.tvMarcador1.text = marcador.marcador1
+            itemBinding.tvMarcador1.text = marcador.marcador1.toString()
             itemBinding.tvEquipo2.text = marcador.equipo2
-            itemBinding.tvMarcador2.text = marcador.marcador2
+            itemBinding.tvMarcador2.text = marcador.marcador2.toString()
             //Evento enviar Update
             itemBinding.vistaFila.setOnClickListener{
                 val accion = HomeFragmentDirections.actionNavHomeToUpdateMarcadorFragment(marcador)

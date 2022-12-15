@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".ui.home.UpdateMarcadorFragment">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:src="@drawable/qatar_2022_logo" />
 
     <EditText
         android:id="@+id/et_equipo1"
@@ -21,7 +28,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/marcador1"
-        android:inputType="text" />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/et_equipo2"
@@ -37,7 +44,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/marcador2"
-        android:inputType="text" />
+        android:inputType="number" />
 
     <Button
         android:id="@+id/bt_update_marcador"

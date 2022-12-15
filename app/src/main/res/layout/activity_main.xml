@@ -4,9 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#80082B"
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/im_logo"
+        android:layout_width="match_parent"
+        android:layout_height="271dp"
+        app:srcCompat="@drawable/qatar" />
 
     <TextView
         android:id="@+id/textView"
@@ -49,17 +56,22 @@
 
         <ImageButton
             android:id="@+id/bt_registro"
+            style="@android:style/Widget.Material.ImageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="#C5C2C3"
             app:srcCompat="@drawable/ic_register" />
 
         <ImageButton
             android:id="@+id/bt_login"
+            style="@android:style/Widget.Material.ImageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="#C4C1C2"
             app:srcCompat="@drawable/ic_login" />
     </LinearLayout>
+
 
 </LinearLayout>

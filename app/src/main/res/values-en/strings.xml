@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Soccer Pool</string>
+    <string name="et_correo">Mail</string>
+    <string name="et_clave">Password</string>
+    <string name="nologin">User/Password not valid</string>
+    <string name="title_activity_principal">Main</string>
+    <string name="equipo1">Local</string>
+    <string name="marcador1">Score 1</string>
+    <string name="equipo2">Visit</string>
+    <string name="marcador2">Score 2</string>
+    <string name="btAddMarcador">Add Score</string>
+    <string name="ms_AddMarcador">Score added successfully</string>
+    <string name="ms_UpdateMarcador">Score edited successfully</string>
+    <string name="ms_DeleteMarcador">Score deleted successfully</string>
+    <string name="bt_update_marcador">Update Score</string>
+    <string name="bt_delete_marcador">Delete Score</string>
+    <string name="ms_FaltaValores">Missing some values</string>
+</resources>

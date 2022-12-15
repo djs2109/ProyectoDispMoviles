@@ -17,19 +17,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="nombreLugar">Equipo Local</string>
-    <string name="correoLugar">Marcador 1</string>
-    <string name="telefonoLugar">Equipo Visita</string>
-    <string name="webLugar">Marcador 2</string>
-    <string name="btAddLugar">Agregar Marcador</string>
-
-    <string name="ms_AddLugar">Marcador Agregado con Éxito</string>
-    <string name="ms_UpdateLugar">Marcador Modificado con Éxito</string>
-    <string name="ms_DeleteLugar">Marcador Eliminado con Éxito</string>
     <string name="ms_FaltaValores">Faltan Valores</string>
-
-    <string name="bt_update_lugar">Actualizar Marcador</string>
-    <string name="bt_delete_lugar">Eliminar Marcador</string>
 
     <!-- Quiniela Strings -->
     <string name="equipo1">Equipo Local</string>

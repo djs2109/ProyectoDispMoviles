@@ -32,7 +32,7 @@
     <fragment
         android:id="@+id/addMarcadorFragment"
         android:name="com.sem08.ui.home.AddMarcadorFragment"
-        android:label="Agregar Marcador"
+        android:label="@string/btAddMarcador"
         tools:layout="@layout/fragment_add_marcador">
         <action
             android:id="@+id/action_addMarcadorrFragment_to_nav_home"
@@ -41,7 +41,7 @@
     <fragment
         android:id="@+id/updateMarcadorFragment"
         android:name="com.sem08.ui.home.UpdateMarcadorFragment"
-        android:label="Actualizar Marcador"
+        android:label="@string/bt_update_marcador"
         tools:layout="@layout/fragment_update_marcador" >
         <action
             android:id="@+id/action_updateMarcadorFragment_to_nav_home"
